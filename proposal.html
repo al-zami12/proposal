@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage Proposal</title>
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+        }
+        #proposal-container {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        #yes-btn, #no-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        #yes-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        #no-btn {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="proposal-container">
+        <h1>Will you marry me?</h1>
+        <button id="yes-btn" onclick="yesPressed()">Yes</button>
+        <button id="no-btn" onclick="noPressed()">No</button>
+    </div>
+    <script>
+        let sizeFactor = 1;
+
+        function yesPressed() {
+            alert("Congratulations! She said Yes! 🎉🥂");
+        }
+
+        function noPressed() {
+            alert("Oops! She said No! 😢\nBut don't worry, keep trying!");
+            sizeFactor++;
+            document.getElementById("proposal-container").style.fontSize = `${16 * sizeFactor}px`;
+        }
+    </script>
+</body>
+</html>
